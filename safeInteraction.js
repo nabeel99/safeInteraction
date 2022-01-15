@@ -235,12 +235,12 @@ const infuraURL =
 const web3Provider = new ethers.providers.JsonRpcProvider(infuraURL);
 //0x0f561eF8a55137bE95bCbF60B34d9b22634B91FA
 let userAccount = new ethers.Wallet(
-    "014d64afd26bc612e0b3716f53b003bbbe6fc5d405f639fd3e9c56c910bae0ce",
+    "",
     web3Provider
   );
  
   let userAccount2 = new ethers.Wallet(
-    "4680aa61d391adf9f3d4a2c3609eab5a2c202359e7b8baf2e8dd712dbedb5d1e",
+    "",
     web3Provider
   );
   async function main () {
@@ -260,7 +260,7 @@ const safeAddress = "0x12050F7090cb2a1620dA2cb8651489675394D0B8";
 let erc20Address = "0x448de722BD3b081F97131De6987a9E1f6b3dd87f"
 
 const safeConnection = await Safe.default.create({ ethAdapter, safeAddress });
-const safeConnection2 = await Safe.default.create({ ethAdapter:ethAdapter2, safeAddress });
+const safeConnection2 = await Safe.default.create	;
 let cInstance= new tempWeb3.eth.Contract(abi,erc20Address);
 let funcAbi = await cInstance.methods._mint("0x0f561eF8a55137bE95bCbF60B34d9b22634B91FA",web3.utils.toWei('2','ether')).encodeABI();
 //function _mint(address account, uint256 amount) public whiteListOnly
